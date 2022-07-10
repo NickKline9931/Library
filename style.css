@@ -1,3 +1,18 @@
 .bookdiv {
     border: 3px solid gold;
+    padding: 5px;
+    background-color: white;
+    margin-bottom: 0.4rem;
+}
+
+body {
+    background-color: rgb(163, 0, 163);
+}
+
+form {
+    margin-bottom: 0.6rem;
+}
+
+form > label {
+    color: white;
 }
