@@ -11,6 +11,10 @@ const addBook = (ev)=>{
     }
     Library.push(book);
     document.forms[0].reset();
+    console.log(Library[Library.length - 1]);
+    const newDiv = document.createElement("div");
+    document.getElementById('books').appendChild(newDiv);
+    newDiv.innerHTML = JSON.stringify(Library[Library.length - 1], null, 2);
 }
 
 document.addEventListener ('DOMContentLoaded', ()=>{
