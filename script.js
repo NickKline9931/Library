@@ -13,10 +13,21 @@ const addBook = (ev)=>{
     document.forms[0].reset();
     console.log(Library[Library.length - 1]);
     const newDiv = document.createElement("div");
+    
+    newDiv.classList.add('newDiv');
     document.getElementById('books').appendChild(newDiv);
-    newDiv.innerHTML = JSON.stringify(Library[Library.length - 1], null, 2);
+    newDiv.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages, ' + book.status + '.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: ' + book.id;
+    const gone = document.createElement("button");
+    newDiv.appendChild(gone);
+    gone.addEventListener("click", function(){
+        newDiv.remove();
+    });
 }
 
 document.addEventListener ('DOMContentLoaded', ()=>{
     document.getElementById('add').addEventListener('click', addBook)
 });
+
+function removeBook(){
+    newDiv.remove();
+}
