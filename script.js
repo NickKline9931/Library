@@ -7,22 +7,38 @@ const addBook = (ev)=>{
         title: document.getElementById('title').value,
         author: document.getElementById('author').value,
         pages: document.getElementById('pages').value,
-        status: document.getElementById('status').value
     }
     Library.push(book);
     document.forms[0].reset();
     console.log(Library[Library.length - 1]);
-    const newDiv = document.createElement("div");
     
+    const newDiv = document.createElement("div");
     newDiv.classList.add('newDiv');
     document.getElementById('books').appendChild(newDiv);
-    newDiv.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages, ' + book.status + '.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: ' + book.id;
-    const gone = document.createElement("button");
-    newDiv.appendChild(gone);
-    gone.addEventListener("click", function(){
+    newDiv.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages' + '.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: ' + book.id;
+    
+    
+    const statusDisplay = document.createElement("button");
+    statusDisplay.innerHTML = "Unfinished";
+    newDiv.appendChild(statusDisplay);
+    statusDisplay.addEventListener("click", function(){
+        if (statusDisplay.innerHTML == "Unfinished") {
+            statusDisplay.innerHTML = "Finished"
+        } else if (statusDisplay.innerHTML == "Finished") {
+            statusDisplay.innerHTML = "Unfinished"
+        }
+    });
+    const removeDiv = document.createElement("button");
+    removeDiv.classList.add("removeDiv");
+    removeDiv.innerHTML = 'x';
+    newDiv.appendChild(removeDiv);
+    removeDiv.addEventListener("click", function(){
         newDiv.remove();
     });
+
 }
+
+
 
 document.addEventListener ('DOMContentLoaded', ()=>{
     document.getElementById('add').addEventListener('click', addBook)
