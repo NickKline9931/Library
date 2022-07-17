@@ -15,11 +15,15 @@ const addBook = (ev)=>{
     const newDiv = document.createElement("div");
     newDiv.classList.add('newDiv');
     document.getElementById('books').appendChild(newDiv);
-    newDiv.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages' + '.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: ' + book.id;
-    
+
+    const bookText = document.createElement("h3");
+    bookText.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages' + '.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: ' + book.id;
+    bookText.classList.add('bookText')
+    newDiv.appendChild(bookText)
     
     const statusDisplay = document.createElement("button");
     statusDisplay.innerHTML = "Unfinished";
+    statusDisplay.classList.add("statusDisplay")
     newDiv.appendChild(statusDisplay);
     statusDisplay.addEventListener("click", function(){
         if (statusDisplay.innerHTML == "Unfinished") {
@@ -28,6 +32,7 @@ const addBook = (ev)=>{
             statusDisplay.innerHTML = "Unfinished"
         }
     });
+
     const removeDiv = document.createElement("button");
     removeDiv.classList.add("removeDiv");
     removeDiv.innerHTML = 'x';
