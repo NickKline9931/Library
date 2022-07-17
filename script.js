@@ -16,8 +16,12 @@ const addBook = (ev)=>{
     newDiv.classList.add('newDiv');
     document.getElementById('books').appendChild(newDiv);
 
-    const bookText = document.createElement("h3");
-    bookText.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages' + '.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID: ' + book.id;
+    const bookId = document.createElement("p")
+    bookId.innerHTML = 'ID: ' + book.id;
+    newDiv.appendChild(bookId);
+
+    const bookText = document.createElement("p");
+    bookText.innerHTML = book.title + ' by '  + book.author + ', ' + book.pages + ' pages' + '.'
     bookText.classList.add('bookText')
     newDiv.appendChild(bookText)
     
