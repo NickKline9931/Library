@@ -11,6 +11,7 @@
 }
 
 .removeDiv {
+    order: 1;
     background-color: red;
     border: none;
     border-radius: 5px;
@@ -25,6 +26,14 @@
     margin-right: 0.4rem;
     font-size: 1.4rem;
     padding-bottom: 0.2rem;
+}
+
+.statusDisplay {
+    order: 3;
+}
+
+.bookText {
+    order: 2;
 }
 
 body {
