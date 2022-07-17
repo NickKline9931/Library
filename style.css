@@ -31,7 +31,7 @@
 .bookId {
     order: 2;
     font-size: 1.3rem;
-    margin-right: 2.5rem;
+    margin-right: 3rem;
 }
 
 .bookText {
@@ -42,6 +42,16 @@
 
 .statusDisplay {
     order: 3;
+    height: 1.6rem;
+    width: 6rem;
+    border: 2px solid gold;
+    background-color: rgba(254, 255, 196, 0.568);
+    border-radius: 3px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.22rem;
 }
 
 
