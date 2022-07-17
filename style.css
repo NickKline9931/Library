@@ -1,10 +1,9 @@
 .newDiv {
     border: 3px solid gold;
-    padding: 5px;
+    padding: 0.35rem;
     background-color: white;
     margin-bottom: 0.4rem;
     display: flex;
-    
     justify-content: flex-start;
     align-items: center;
     height: 1.4rem;
@@ -23,18 +22,28 @@
     align-items: center;
     text-align: center;
     font-weight: bold;
-    margin-right: 0.4rem;
     font-size: 1.4rem;
+    margin-right: 0.4rem;
     padding-bottom: 0.2rem;
+    margin-right: 0.8rem;
+}
+
+.bookId {
+    order: 2;
+    font-size: 1.3rem;
+    margin-right: 2.5rem;
+}
+
+.bookText {
+    order: 2;
+    font-size: 1.3rem;
+    margin-right: 2rem;
 }
 
 .statusDisplay {
     order: 3;
 }
 
-.bookText {
-    order: 2;
-}
 
 body {
     background-color: rgb(163, 0, 163);
