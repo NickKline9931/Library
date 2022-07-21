@@ -1,3 +1,39 @@
+#header{
+    color: white;
+    height: 1.8rem;
+}
+
+input {
+    margin-right: 1rem;
+}
+
+button {
+    position: absolute;
+    right: 34.35rem;
+    bottom: 28.78rem;
+    width: 3.5rem;
+    height: 1.5rem;
+    background-color: gold;
+    border: none;
+    border-radius: 2px;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+}
+
+#library {
+    color: white;
+    text-decoration: underline;
+    margin-bottom: -0.1rem;
+    position: relative;
+    bottom: 0.4rem;
+}
+
+#directions {
+    position: relative;
+    top: 0.3rem;
+    font-weight: bold;
+}
+
 .newDiv {
     border: 3px solid gold;
     padding: 0.35rem;
@@ -54,15 +90,18 @@
     padding-top: 0.22rem;
 }
 
-
 body {
     background-color: rgb(163, 0, 163);
 }
 
 form {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
 }
 
 form > label {
     color: white;
+}
+
+label {
+    font-weight: bold;
 }
