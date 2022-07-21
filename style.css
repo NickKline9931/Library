@@ -7,7 +7,7 @@ input {
     margin-right: 1rem;
 }
 
-button {
+#add {
     position: absolute;
     right: 34.35rem;
     bottom: 28.78rem;
