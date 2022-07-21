@@ -18,6 +18,7 @@ const addBook = (ev)=>{
 
     const bookId = document.createElement("p")
     bookId.innerHTML = 'ID: ' + book.id;
+    bookId.classList.add("bookId");
     newDiv.appendChild(bookId);
 
     const bookText = document.createElement("p");
