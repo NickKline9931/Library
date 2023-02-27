@@ -5,12 +5,11 @@
 
 input {
     margin-right: 1rem;
+    min-width: 2px;
 }
 
 #add {
-    position: absolute;
-    right: 34.35rem;
-    bottom: 28.78rem;
+    position: relative;
     width: 3.5rem;
     height: 1.5rem;
     background-color: gold;
